@@ -1,0 +1,32 @@
+<div class="dashboard-container">
+  <div class="welcome-card">
+    <h2>Welcome, {{ userName }}</h2>
+    <p class="role-tag">Role: {{ userRole | titlecase }}</p>
+  </div>
+
+  <div class="dashboard-grid">
+    <div class="dashboard-card">
+      <h4>Notices</h4>
+      <p>Stay updated with the latest college circulars.</p>
+      <button class="action-btn">View Notices</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h4>Schedule</h4>
+      <p>Check your daily timetable and class schedule.</p>
+      <button class="action-btn">View Schedule</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h4>Assignments</h4>
+      <p>View and submit your assignments on time.</p>
+      <button class="action-btn">Go to Assignments</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h4>Profile</h4>
+      <p>Update your personal details and preferences.</p>
+      <button class="action-btn">Edit Profile</button>
+    </div>
+  </div>
+</div>

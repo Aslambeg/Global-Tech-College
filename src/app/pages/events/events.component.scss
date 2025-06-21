@@ -1,0 +1,64 @@
+.events-section {
+padding: 4rem 0;
+background: #f9f9f9;
+
+h2 {
+font-weight: 700;
+font-size: 2.5rem;
+margin-bottom: 2rem;
+color: #2c3e50;
+}
+
+.card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+border: none;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+css
+Copy
+Edit
+&:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.5rem;
+
+  h5 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #34495e;
+  }
+
+  p {
+    color: #666;
+    font-size: 0.95rem;
+  }
+}
+}
+}
+
+@media (max-width: 768px) {
+.events-section {
+padding: 2rem 1rem;
+
+css
+Copy
+Edit
+h2 {
+  font-size: 2rem;
+}
+}
+
+.card img {
+height: 180px;
+}
+}

@@ -1,0 +1,9 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Admin Dashboard</h2>
+
+  <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
+    <button class="btn btn-outline-primary w-100" (click)="goTo('/students')">Manage Students</button>
+    <button class="btn btn-outline-success w-100" (click)="goTo('/add-student')">Add Student</button>
+    <button class="btn btn-outline-danger w-100" (click)="logout()">Logout</button>
+  </div>
+</div>

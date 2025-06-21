@@ -1,0 +1,89 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@college.com",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "email": "student@college.com",
+      "password": "student",
+      "role": "student"
+    },
+    {
+      "id": "3",
+      "email": "faculty@college.com",
+      "password": "faculty",
+      "role": "faculty"
+    },
+    {
+      "id": "e26b",
+      "email": "aslambeg4518@gmail.com",
+      "password": "Pass@45;",
+      "role": "admin"
+    },
+    {
+      "id": "c439",
+      "email": "kartikpatil99@gmail.com",
+      "password": "Pass$45;",
+      "role": "student"
+    },
+    {
+      "id": "5e59",
+      "email": "sagarshinde4@gmail.com",
+      "password": "Akluj@123",
+      "role": "student"
+    },
+    {
+      "id": "fc2e",
+      "name": "Kishor Nanaware",
+      "address": "Kandar",
+      "age": 24,
+      "email": "kishorn34@gmail.com",
+      "password": "Akluj@123",
+      "role": "student"
+    }
+  ],
+  "newUsers": [
+    {
+      "id": "1",
+      "email": "",
+      "password": "",
+      "role": ""
+    },
+    {
+      "id": "71df",
+      "email": "begaslam9109@gmail.com",
+      "password": "Pass@45;",
+      "role": "admin"
+    }
+  ],
+  "students": [
+    {
+      "name": "AliAnvar",
+      "email": "ali@college.com",
+      "course": "Computer Science",
+      "id": "1"
+    },
+    {
+      "id": "e8ae",
+      "name": "Sahil Shaikh",
+      "email": "sahil45@gmail.com",
+      "course": "B.Sc."
+    },
+    {
+      "id": "0a30",
+      "name": "Manish Jathar",
+      "email": "manishj45@gmail.com",
+      "course": "BCA"
+    },
+    {
+      "id": "3591",
+      "name": "Sifiya Shaikh",
+      "email": "sufiyashaikh90@gmail.com",
+      "course": "B.Sc"
+    }
+  ]
+}
