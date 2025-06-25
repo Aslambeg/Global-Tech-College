@@ -28,5 +28,53 @@
       <p>Update your personal details and preferences.</p>
       <button class="action-btn">Edit Profile</button>
     </div>
+
+    <div class="dashboard-card">
+      <h4 class="card-title">Upload / View Notes</h4>
+      <p>Admins can upload and students can view/download notes.</p>
+      <button routerLink="/notes" class="action-btn">Go to Notes</button>
+    </div>
   </div>
 </div>
+
+
+<!-- <div class="col-md-4">
+  <div class="card h-100 shadow-sm">
+    <div class="card-body text-center">
+      <h5 class="card-title">Upload / View Notes</h5>
+      <p class="card-text">Admins can upload and students can view/download notes.</p>
+      <a routerLink="/notes" class="action-btn">Go to Notes</a>
+    </div>
+  </div>
+</div> -->
+<div class="col-md-4">
+  <div class="card h-100 shadow border-0 custom-card animate__animated animate__fadeInUp">
+    <div class="card-body text-center">
+      <h5 class="card-title fw-bold text-primary">Upload / View Notes</h5>
+      <p class="card-text text-muted"> Admins can upload and students can view/download notes. </p> <a
+        routerLink="/notes" class="btn btn-primary btn-sm rounded-pill px-4">Go to Notes</a>
+    </div>
+  </div>
+</div>
+<style>
+  .custom-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+border-radius: 15px;
+background: #ffffff;
+}
+
+.custom-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+background: linear-gradient(to right, #fceabb, #f8b500);
+color: #fff;
+}
+
+.card-title {
+font-size: 1.2rem;
+}
+
+.card-text {
+font-size: 0.95rem;
+}
+</style>

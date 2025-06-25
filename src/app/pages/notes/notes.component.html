@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<!-- <div class="container notes-section mt-5">
+    <h2 class="text-center mb-4">📚 Notes Section</h2> 
+    <div *ngIf="role === 'admin'" class="upload-area text-center mb-4">
+        <label for="upload" class="btn btn-primary">
+            <i class="bi bi-upload"></i> Upload Note </label>
+        <input id="upload" type="file" (change)="uploadNote($event)" hidden />
+    </div> 
+</div> -->
+<!-- </div> -->
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">📚 Notes Repository</h2> <!-- Upload (Admin Only) -->
+    <div class="mb-4 text-center" *ngIf="isAdmin()"> 
+        <label class="btn btn-warning btn-sm shadow upload-label"> <i
+                class="bi bi-upload"></i> Upload Note <input type="file" (change)="uploadNote($event)" hidden />
+        </label> </div> 
+        <!-- Notes Table -->
+    <div class="table-responsive shadow rounded">
+        <table class="table table-bordered table-hover table-striped text-center align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>File Name</th>
+                    <th>Preview</th>
+                    <th>Download</th>
+                    <th *ngIf="isAdmin()">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let note of notes; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ note.name }}</td>
+                    <td> <a [href]="note.url" target="_blank" class="btn btn-outline-secondary btn-sm"> <i
+                                class="bi bi-eye"></i> View </a> </td>
+                    <td> <a [href]="note.url" [download]="note.name" class="btn btn-success btn-sm"> <i
+                                class="bi bi-download"></i> Download </a> </td>
+                    <td *ngIf="isAdmin()"> <button (click)="deleteNote(note.id)" class="btn btn-danger btn-sm"> <i
+                                class="bi bi-trash"></i> Delete </button> </td>
+                </tr>
+                <tr *ngIf="notes.length === 0">
+                    <td colspan="5" class="text-muted">No notes uploaded yet.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

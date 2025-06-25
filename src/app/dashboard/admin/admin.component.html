@@ -1,9 +1,81 @@
-<div class="container mt-5">
-  <h2 class="text-center mb-4">Admin Dashboard</h2>
-
-  <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
-    <button class="btn btn-outline-primary w-100" (click)="goTo('/students')">Manage Students</button>
-    <button class="btn btn-outline-success w-100" (click)="goTo('/add-student')">Add Student</button>
-    <button class="btn btn-outline-danger w-100" (click)="logout()">Logout</button>
-  </div>
-</div>
+<div class="admin-dashboard container py-5">
+  <h2 class="text-center mb-4 text-primary">Welcome, {{ username | titlecase }}!</h2>
+  <h5 class="text-center mb-4 text-muted">Logged in as: <span class="badge bg-info text-dark">{{ role | uppercase
+      }}</span></h5> <!-- Summary Cards -->
+  <div class="row text-center mb-5">
+    <div class="col-md-4">
+      <div class="summary-card p-4 shadow-sm rounded border border-info-subtle">
+        <h4>Total Students</h4>
+        <p class="display-6 fw-bold text-primary">1250+</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="summary-card p-4 shadow-sm rounded border border-success-subtle">
+        <h4>Total Faculty</h4>
+        <p class="display-6 fw-bold text-success">80+</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="summary-card p-4 shadow-sm rounded border border-warning-subtle">
+        <h4>Active Courses</h4>
+        <p class="display-6 fw-bold text-warning">35</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="upload-card card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <h5 class="card-title">📚 Upload / View Notes</h5>
+          <p class="card-text"> Admins can upload and students can view/download notes. </p> <a routerLink="/notes"
+            class="btn btn-outline-primary">Go to Notes</a>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Dashboard Info -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-6">
+      <div class="info-box p-4 shadow-sm rounded border border-primary-subtle">
+        <h4>📊 Dashboard Overview</h4>
+        <p> From here, you can manage student records, add faculty, assign roles, and access reports. Stay updated with
+          the academic calendar and system notifications. </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="info-box p-4 shadow-sm rounded border border-success-subtle">
+        <h4>📅 Upcoming Activities</h4>
+        <ul>
+          <li>Faculty Development Seminar: July 10</li>
+          <li>Student Orientation: August 5–10</li>
+          <li>Semester Start: August 12</li>
+          <li>Annual Sports Week: October 1–7</li>
+        </ul>
+      </div>
+    </div>
+  </div> <!-- Quick Links Section -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-4">
+      <div class="info-box p-3 shadow-sm rounded border border-dark-subtle">
+        <h5>📁 Manage Students</h5>
+        <p><a (click)="goTo('/students')" class="text-decoration-none text-primary fw-bold">View All Students</a></p>
+        <p><a (click)="goTo('/add-student')" class="text-decoration-none text-primary">Add New Student</a></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="info-box p-3 shadow-sm rounded border border-dark-subtle">
+        <h5>👨‍🏫 Manage Faculty</h5>
+        <p><a (click)="goTo('/register')" class="text-decoration-none text-primary fw-bold">Register Faculty</a></p>
+        <p><a (click)="goTo('/dashboard/faculty')" class="text-decoration-none text-primary">Faculty Dashboard</a></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="info-box p-3 shadow-sm rounded border border-dark-subtle">
+        <h5>🧾 Reports & Analytics</h5>
+        <p><a href="#" class="text-decoration-none text-primary fw-bold">Student Performance</a></p>
+        <p><a href="#" class="text-decoration-none text-primary">Attendance Summary</a></p>
+      </div>
+    </div>
+  </div> <!-- Message Section -->
+  <div class="message-box p-4 bg-light rounded shadow-sm border-start border-4 border-primary">
+    <h4 class="mb-3">📣 Message from the Principal</h4>
+    <p> “We are proud to lead one of the top academic institutions. Our goal is to foster innovation, knowledge, and a
+      spirit of service. As administrators, let us continue to ensure students receive the best support to grow and
+      excel.” </p>

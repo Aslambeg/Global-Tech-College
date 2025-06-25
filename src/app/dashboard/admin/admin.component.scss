@@ -1,7 +1,124 @@
-.container {
-  max-width: 600px;
+/* Container styling */
+.admin-dashboard {
+font-family: 'Poppins', sans-serif;
+color: #333;
+
+h2 {
+font-size: 2.5rem;
+font-weight: 600;
 }
-button {
-  min-height: 50px;
-  font-weight: 600;
+
+h4, h5 {
+color: #2c3e50;
+}
+}
+
+/* Summary Cards */
+.summary-card {
+background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+border-radius: 15px;
+transition: transform 0.3s ease;
+cursor: pointer;
+
+&:hover {
+transform: translateY(-5px);
+background: linear-gradient(to right, #d0f0f7, #e7f3d3);
+}
+
+h4 {
+font-size: 1.2rem;
+margin-bottom: 0.5rem;
+}
+
+p {
+margin: 0;
+}
+}
+
+/* Info Boxes */
+.info-box {
+background-color: #f9f9f9;
+border-left: 4px solid #17a2b8;
+transition: all 0.3s ease;
+
+&:hover {
+background-color: #eef9fb;
+transform: scale(1.01);
+}
+
+ul {
+padding-left: 1.2rem;
+li {
+margin-bottom: 0.3rem;
+}
+}
+}
+
+/* Quick Links */
+.info-box a {
+display: block;
+margin-bottom: 0.3rem;
+transition: color 0.3s;
+}
+
+.info-box a:hover {
+color: #007bff;
+text-decoration: underline;
+}
+
+/* Message Box */
+.message-box {
+border-radius: 12px;
+background: #ffffff;
+line-height: 1.6;
+
+blockquote-footer {
+font-size: 0.9rem;
+margin-top: 0.5rem;
+color: #6c757d;
+}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.admin-dashboard h2 {
+font-size: 2rem;
+}
+}
+.upload-card {
+background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+border: none;
+border-radius: 12px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+position: relative;
+overflow: hidden;
+}
+
+.upload-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+background: linear-gradient(135deg, #fdfdfd, #d6e4ff);
+}
+
+.upload-card .card-title {
+font-size: 1.2rem;
+font-weight: bold;
+color: #2c3e50;
+}
+
+.upload-card .card-text {
+font-size: 0.95rem;
+color: #555;
+}
+
+.upload-card .btn-outline-primary {
+border-radius: 30px;
+padding: 0.4rem 1.2rem;
+font-weight: 500;
+transition: 0.3s ease;
+}
+
+.upload-card .btn-outline-primary:hover {
+background-color: #007bff;
+color: #fff;
 }

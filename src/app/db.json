@@ -44,6 +44,24 @@
       "email": "kishorn34@gmail.com",
       "password": "Akluj@123",
       "role": "student"
+    },
+    {
+      "id": "43f7",
+      "name": "Abhishek Mukund Lohar",
+      "address": "Velapur",
+      "age": 25,
+      "email": "abhi90@gmail.com",
+      "password": "Akluj@123",
+      "role": "admin"
+    },
+    {
+      "id": "c984",
+      "name": "Aslam Salim Beg",
+      "address": "Akluj",
+      "age": 21,
+      "email": "begaslam9109@gmail.com",
+      "password": "Aslam@45;",
+      "role": "admin"
     }
   ],
   "newUsers": [
@@ -84,6 +102,51 @@
       "name": "Sifiya Shaikh",
       "email": "sufiyashaikh90@gmail.com",
       "course": "B.Sc"
+    },
+    {
+      "id": "e09d",
+      "name": "Arif Mohammad Shaikh",
+      "email": "arifshaikh45@gmail.com",
+      "course": "M.Sc."
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "name": "AngularBasics.pdf",
+      "url": "/assets/notes/AngularBasics.pdf",
+      "uploadedBy": "admin",
+      "date": "2025-06-24T10:30:00"
+    },
+    {
+      "id": "dfec",
+      "name": "WhatsApp Image 2025-06-13 at 15.00.50_410dd1ce.jpg",
+      "url": "blob:http://localhost:4200/e7d706ac-ac0a-4b3b-8db6-b461e17f17ef"
+    },
+    {
+      "id": "31a8",
+      "name": "Aslam_B_Software_Developer.pdf",
+      "url": "blob:http://localhost:4200/2599f2fd-f632-4b8b-b414-8d4ae15baf08"
+    },
+    {
+      "id": "8e35",
+      "name": "ASLAM-SALIM-BEG-FlowCV-Resume-20250618.pdf",
+      "url": "blob:http://localhost:4200/2f247d1c-f9bb-4bb4-b117-836ca55b6937"
+    },
+    {
+      "id": "a6a5",
+      "name": "e2d67970-a579-498f-8b3d-2e526214a40e.pdf",
+      "url": "blob:http://localhost:4200/5fcd01dc-fd7c-4f0d-a74a-83e3c1d2e9e9"
+    },
+    {
+      "id": "833f",
+      "name": "v-lionel-_Lylye3fjYs-unsplash.jpg",
+      "url": "blob:http://localhost:4200/72b1735f-d526-4f9a-98b1-a336f93d3c79"
+    },
+    {
+      "id": "d312",
+      "name": "Aslam_Salim_Beg_Resume_Final.pdf",
+      "url": "blob:http://localhost:4200/5671ff00-425c-4980-a491-3e2991fad493"
     }
   ]
 }

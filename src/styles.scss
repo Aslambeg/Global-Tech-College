@@ -1,39 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+// /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-body {
-background-color: #fff;
-color: #000;
-transition: background-color 0.3s ease, color 0.3s ease;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// body {
+// background-color: #fff;
+// color: #000;
+// transition: background-color 0.3s ease, color 0.3s ease;
+// font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+// }
 
-.dark-theme {
+// .dark-theme {
+// background-color: #121212;
+// color: #f5f5f5;
+// }
+
+// .dark-theme .navbar {
+// background-color: #1f1f1f !important;
+// }
+
+// .dark-theme .card {
+// background-color: #2a2a2a;
+// color: #fff;
+// }
+
+// .dark-theme .btn-outline-light {
+// border-color: #bbb;
+// color: #fff;
+// }
+
+// .dark-theme .form-control {
+// background-color: #222;
+// color: #fff;
+// border-color: #555;
+// }
+
+// .dark-theme input::placeholder {
+// color: #ccc;
+// }
+
+
+body.dark-mode {
 background-color: #121212;
-color: #f5f5f5;
+color: #ffffff;
 }
 
-.dark-theme .navbar {
-background-color: #1f1f1f !important;
+body.dark-mode .navbar {
+background-color: #1f1f1f;
 }
 
-.dark-theme .card {
-background-color: #2a2a2a;
+body.dark-mode .card {
+background-color: #1f1f1f;
+color: white;
+}
+
+body.dark-mode .btn {
+background-color: #333;
 color: #fff;
 }
 
-.dark-theme .btn-outline-light {
-border-color: #bbb;
-color: #fff;
-}
+// 💾 Optional: Apply transition
 
-.dark-theme .form-control {
-background-color: #222;
-color: #fff;
-border-color: #555;
-}
+// Add to your global styles:
 
-.dark-theme input::placeholder {
-color: #ccc;
+body {
+transition: background-color 0.3s, color 0.3s;
 }

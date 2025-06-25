@@ -13,6 +13,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { EventsComponent } from './pages/events/events.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AdmissionComponent } from './pages/admission/admission.component';
+import { NotesComponent } from './pages/notes/notes.component';
 
 // const routes: Routes = [
 //   { path: 'login', component: LoginComponent },
@@ -49,6 +50,7 @@ const routes: Routes = [
   { path: 'students', component: StudentListComponent, canActivate: [authGuardGuard], data: { role: 'admin' } },
   { path: 'add-student', component: StudentFormComponent, canActivate: [authGuardGuard], data: { role: 'admin' } },
   { path: 'edit-student/:id', component: StudentFormComponent, canActivate: [authGuardGuard], data: { role: 'admin' } },
+  { path: 'notes', component: NotesComponent },
 
   // Public Register route
   { path: 'register', component: RegisterComponent },

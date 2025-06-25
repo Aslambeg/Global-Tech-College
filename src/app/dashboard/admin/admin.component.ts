@@ -8,14 +8,31 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent {
-  constructor(private auth: AuthService, private router: Router) {}
+  // constructor(private auth: AuthService, private router: Router) {}
 
-  logout() {
-    this.auth.logout();
-  }
+  // logout() {
+  //   this.auth.logout();
+  // }
 
-  goTo(path: string) {
-    this.router.navigate([path]);
-  }
+  // goTo(path: string) {
+  //   this.router.navigate([path]);
+  // }
+  username: string = '';
+role: string = '';
+
+constructor(private auth: AuthService, private router: Router) {}
+
+ngOnInit() {
+this.username = this.auth.getUserName(); // Assumes getUsername() is available in AuthService
+this.role = this.auth.getRole();
+}
+
+logout() {
+this.auth.logout();
+}
+
+goTo(path: string) {
+this.router.navigate([path]);
+}
 
 }

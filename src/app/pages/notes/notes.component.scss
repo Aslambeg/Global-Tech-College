@@ -1,0 +1,83 @@
+.container {
+max-width: 900px;
+background: #fff;
+padding: 2rem;
+border-radius: 1rem;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+animation: fadeIn 0.6s ease-in-out;
+}
+
+h2 {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 600;
+color: #333;
+}
+
+.upload-label {
+font-size: 14px;
+padding: 0.6rem 1.2rem;
+cursor: pointer;
+border-radius: 30px;
+transition: all 0.3s ease-in-out;
+}
+
+.upload-label:hover {
+background-color: #ffc107;
+transform: scale(1.05);
+}
+
+.table {
+font-size: 0.95rem;
+border-radius: 10px;
+overflow: hidden;
+}
+
+.table th {
+background: #343a40 !important;
+color: #fff;
+}
+
+.table td {
+vertical-align: middle;
+}
+
+.table a.btn {
+padding: 0.25rem 0.6rem;
+font-size: 0.8rem;
+transition: 0.2s ease-in-out;
+}
+
+.table a.btn:hover {
+transform: scale(1.05);
+}
+
+.btn-danger {
+background-color: #dc3545 !important;
+border-color: #dc3545 !important;
+}
+
+.btn-success {
+background-color: #198754 !important;
+border-color: #198754 !important;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@media (max-width: 768px) {
+.container {
+padding: 1rem;
+}
+
+h2 {
+font-size: 1.2rem;
+}
+}

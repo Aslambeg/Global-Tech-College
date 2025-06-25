@@ -19,6 +19,7 @@ import { EventsComponent } from './pages/events/events.component';
 import { AdmissionComponent } from './pages/admission/admission.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { NotesComponent } from './pages/notes/notes.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FooterComponent } from './footer/footer.component';
     EventsComponent,
     AdmissionComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    NotesComponent
   ],
   imports: [
     BrowserModule,
