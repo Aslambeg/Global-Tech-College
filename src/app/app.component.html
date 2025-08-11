@@ -1,57 +1,3 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/home">Global Tech College</a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/events">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/admission">Admission</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/login">Login</a>
-        </li>
-      </ul>
-      <form class="d-flex" (ngSubmit)="onSearch()">
-        <input class="form-control me-2 search-input" type="text" placeholder="Search..." [(ngModel)]="searchQuery"
-          name="searchQuery" aria-label="Search" /> <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav> -->
-<!-- <nav class="navbar glass-navbar navbar-expand-lg fixed-top">
-  <div class="container-fluid px-4"> <a class="navbar-brand fw-bold text-white fs-4" routerLink="/">CollegeApp</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-      aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"> <span
-        class="navbar-toggler-icon bg-white"></span> </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"> <a class="nav-link text-white" routerLink="/home">Home</a> </li>
-        <li class="nav-item"> <a class="nav-link text-white" routerLink="/about">About</a> </li>
-        <li class="nav-item"> <a class="nav-link text-white" routerLink="/events">Events</a> </li>
-        <li class="nav-item"> <a class="nav-link text-white" routerLink="/admission">Admission</a> </li>
-        <li class="nav-item"> <a class="nav-link text-white" routerLink="/contact">Contact</a> </li>
-        <li class="nav-item"> <a class="nav-link text-white" routerLink="/login">Login</a> </li>
-      </ul>
-      <form class="d-flex ms-3" role="search" (submit)="onSearch()"> <input class="form-control me-2" type="search"
-          placeholder="Search" [(ngModel)]="searchQuery" name="search"> <button class="btn btn-outline-light"
-          type="submit">Go</button> </form>
-    </div>
-  </div>
-</nav>
-<div class="content-wrapper pt-5 mt-5">
-  <router-outlet></router-outlet>
-</div> -->
 <nav class="navbar navbar-expand-lg glass-navbar fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand fw-bold" href="#">Global Tech College</a>
@@ -86,14 +32,14 @@
         <li class="nav-item" *ngIf="isLoggedIn">
           <a class="nav-link text-white" style="cursor: pointer;" (click)="logout()">Logout</a>
         </li>
-        <!-- <li class="nav-item" *ngIf="isLoggedIn"> -->
+        <li class="nav-item" *ngIf="isLoggedIn">
           <!-- <span class="nav-link text-warning fw-bold">Welcome {{ username }}</span> -->
-          <!-- <span class="nav-link text-warning fw-bold">Welcome {{ username }}</span> -->
-          <!-- <span class="typewriter-username" *ngIf="isLoggedIn && username">
+          <!-- <small class="nav-link text-warning fw-bold">{{ username }}</small> -->
+          <!-- <span class="typewriter-username" *ngIf="isLoggedIn && username"> 
             {{ username }}
           </span> -->
           <!-- <span class="nav-link text-warning fw-bold">{{ username }}</span> -->
-        <!-- </li> -->
+        </li>
 
       </ul>
       <form class="d-flex" (submit)="onSearch()">
@@ -105,6 +51,8 @@
         <button (click)="toggleTheme()" class="btn btn-outline-light ms-2">
           {{ isDarkMode ? '🌙 Dark' : '☀️ Light' }}
         </button>
+        
+        
     </div>
   </div>
 </nav>

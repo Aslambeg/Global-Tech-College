@@ -17,22 +17,58 @@ export class AdminComponent {
   // goTo(path: string) {
   //   this.router.navigate([path]);
   // }
-  username: string = '';
+//   username: string = '';
+// role: string = '';
+
+// constructor(private auth: AuthService, private router: Router) {}
+
+// ngOnInit() {
+// this.username = this.auth.getUserName(); // Assumes getUsername() is available in AuthService
+// this.role = this.auth.getRole();
+// }
+
+// logout() {
+// this.auth.logout();
+// }
+
+// goTo(path: string) {
+// this.router.navigate([path]);
+// }
+// ngOnInIt(){
+//   console.log("Data")
+// }
+//     username: string = '';
+// role: string = '';
+
+// constructor(private auth: AuthService, private router: Router) {}
+
+// ngOnInit(): void {
+// this.username = this.auth.getUserName();
+// this.role = this.auth.getUserRole();
+// }
+
+// // goTo(path: string): void {
+// // this.router.navigate([path]);
+// // }
+// goTo(path: string): void {
+// this.router.navigate([path]);
+// }
+
+// logout(): void {
+// this.auth.logout();
+// }
+    username: string = '';
 role: string = '';
 
-constructor(private auth: AuthService, private router: Router) {}
+constructor(private authService: AuthService) {}
 
-ngOnInit() {
-this.username = this.auth.getUserName(); // Assumes getUsername() is available in AuthService
-this.role = this.auth.getRole();
+ngOnInit(): void {
+this.username = this.authService.getUserName();
+this.role = this.authService.getRole();
 }
 
-logout() {
-this.auth.logout();
-}
-
-goTo(path: string) {
-this.router.navigate([path]);
+goTo(url: string) {
+window.location.href = url; // alternative to router.navigate since <router-outlet> is not used
 }
 
 }

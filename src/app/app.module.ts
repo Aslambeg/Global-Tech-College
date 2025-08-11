@@ -20,6 +20,19 @@ import { AdmissionComponent } from './pages/admission/admission.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotesComponent } from './pages/notes/notes.component';
+import { AdminStudentsComponent } from './dashboard/admin-students/admin-students.component';
+import { StudentModalComponent } from './student-modal/student-modal.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { DashboardChartsComponent } from './dashboard/admin/dashboard-charts/dashboard-charts.component';
+import { NgChartsModule } from 'ng2-charts';
+import { NotificationComponent } from './components/notification/notification.component';
+import { FileUploadNewComponent } from './dashboard/admin/file-upload-new/file-upload-new.component';
+import { NewAdminStudentComponent } from './dashboard/admin/new-admin-student/new-admin-student.component';
+import { BScComponent } from './pages/bsc/bsc.component';
+import { NewBScComponent } from './pages/home/new-bsc/new-bsc.component';
+import { EngineeringComponent } from './pages/engineering/engineering.component';
+import { ManagementComponent } from './pages/management/management.component';
+import { PureSciencesComponent } from './pages/pure-sciences/pure-sciences.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +50,19 @@ import { NotesComponent } from './pages/notes/notes.component';
     AdmissionComponent,
     ContactComponent,
     FooterComponent,
-    NotesComponent
+    NotesComponent,
+    AdminStudentsComponent,
+    StudentModalComponent,
+    FileUploadComponent,
+    DashboardChartsComponent,
+    NotificationComponent,
+    FileUploadNewComponent,
+    NewAdminStudentComponent,
+    BScComponent,
+    NewBScComponent,
+    EngineeringComponent,
+    ManagementComponent,
+    PureSciencesComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +71,8 @@ import { NotesComponent } from './pages/notes/notes.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

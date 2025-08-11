@@ -59,6 +59,7 @@ export class NotesComponent {
 // });
 // }
 notes: any[] = [];
+users:any[]=[];
 role: string = '';
 apiUrl: string = 'http://localhost:3000/notes';
 
@@ -67,6 +68,9 @@ constructor(private http: HttpClient, private auth: AuthService) {}
 ngOnInit(): void {
 this.role = this.auth.getRole();
 this.fetchNotes();
+this.auth.getUsers().subscribe((data:any)=>{
+  this.users=data;
+})
 }
 
 fetchNotes(): void {

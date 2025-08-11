@@ -1,0 +1,33 @@
+<section class="courses-section">
+  <div class="course-card">
+    <div class="course-image">
+      <img [src]="course.icon" alt="{{ course.title }}" loading="lazy" />
+    </div>
+    <div class="course-info">
+      <h3>{{ course.title }}</h3>
+      <p class="course-level">{{ course.levels }}</p>
+      <p class="course-desc">{{ course.desc }}</p>
+
+      <h4>Key Features</h4>
+      <ul class="course-features">
+        <li *ngFor="let feature of course.features">✔ {{ feature }}</li>
+      </ul>
+
+      <h4>Prerequisites</h4>
+      <ul class="course-prerequisites">
+        <li *ngFor="let pre of course.prerequisites">• {{ pre }}</li>
+      </ul>
+
+      <h4>Career Paths</h4>
+      <ul class="course-career">
+        <li *ngFor="let career of course.careerPaths">→ {{ career }}</li>
+      </ul>
+
+      <p><strong>Duration:</strong> {{ course.duration }}</p>
+      <p><strong>Mode:</strong> {{ course.mode }}</p>
+      <p><strong>Contact:</strong> <a href="mailto:{{ course.contactEmail }}">{{ course.contactEmail }}</a></p>
+
+      <button class="learn-more-btn">Learn More</button>
+    </div>
+  </div>
+</section>

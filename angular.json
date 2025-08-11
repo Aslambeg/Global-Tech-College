@@ -33,13 +33,13 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "D:/Angular/mycollege-web-app/node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "D:/Angular/mycollege-web-app/node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-
-  
+              "D:/Angular/mycollege-web-app/node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "D:/Angular/mycollege-web-app/node_modules/aos/dist/aos.css",
+              "D:/Angular/mycollege-web-app/node_modules/primeicons/primeicons.css"
             ],
             "scripts": [
-              "D:/Angular/mycollege-web-app/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-
+              "D:/Angular/mycollege-web-app/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "D:/Angular/mycollege-web-app/node_modules/aos/dist/aos.js"
             ]
           },
           "configurations": {
@@ -47,13 +47,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "10kb",
+                  "maximumError": "15kb"
                 }
               ],
               "outputHashing": "all"
@@ -104,11 +104,13 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "D:/Angular/mycollege-web-app/node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "D:/Angular/mycollege-web-app/node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-              
+              "D:/Angular/mycollege-web-app/node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "D:/Angular/mycollege-web-app/node_modules/aos/dist/aos.css",
+              "D:/Angular/mycollege-web-app/node_modules/primeicons/primeicons.css"
             ],
             "scripts": [
-              "D:/Angular/mycollege-web-app/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "D:/Angular/mycollege-web-app/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "D:/Angular/mycollege-web-app/node_modules/aos/dist/aos.js"
             ]
           }
         }

@@ -62,6 +62,24 @@
       "email": "begaslam9109@gmail.com",
       "password": "Aslam@45;",
       "role": "admin"
+    },
+    {
+      "id": "eadd",
+      "name": "Aslam Salim Beg",
+      "address": "Pune",
+      "age": 55,
+      "email": "begaslam9109@gmail",
+      "password": "jjjhjhj",
+      "role": "admin"
+    },
+    {
+      "id": "197b",
+      "name": "Aslam Salim Beg",
+      "address": "Pune",
+      "age": 34,
+      "email": "ganeshs@gmail.com",
+      "password": "uuyuy",
+      "role": "admin"
     }
   ],
   "newUsers": [
@@ -80,9 +98,9 @@
   ],
   "students": [
     {
-      "name": "AliAnvar",
+      "name": "Ali Anvar Shaikh",
       "email": "ali@college.com",
-      "course": "Computer Science",
+      "course": "BCA",
       "id": "1"
     },
     {
@@ -104,15 +122,33 @@
       "course": "B.Sc"
     },
     {
-      "id": "e09d",
-      "name": "Arif Mohammad Shaikh",
-      "email": "arifshaikh45@gmail.com",
-      "course": "M.Sc."
+      "name": "Amar Shaikh",
+      "email": "amarshaikh44@gmail.com",
+      "course": "MCA",
+      "id": "90e1"
+    },
+    {
+      "id": "40a9",
+      "name": "Prem Kambale",
+      "email": "kambaleprem45@gmail.com",
+      "course": "BCA"
+    },
+    {
+      "id": "c60a",
+      "name": "Amir Shaikh",
+      "email": "shaikhamir33@gmail.com",
+      "course": "BCA"
+    },
+    {
+      "id": "9d9e",
+      "name": "Atharv Kambale",
+      "email": "atharvkambale55@gmail.com",
+      "course": "BBA"
     }
   ],
   "notes": [
     {
-      "id": 1,
+      "id": "1",
       "name": "AngularBasics.pdf",
       "url": "/assets/notes/AngularBasics.pdf",
       "uploadedBy": "admin",
@@ -147,6 +183,154 @@
       "id": "d312",
       "name": "Aslam_Salim_Beg_Resume_Final.pdf",
       "url": "blob:http://localhost:4200/5671ff00-425c-4980-a491-3e2991fad493"
+    },
+    {
+      "id": "611e",
+      "name": "Screenshot (6).png",
+      "url": "blob:http://localhost:4200/87a6005c-1d12-45a3-80fc-16ff0c1ff3f4"
+    },
+    {
+      "id": "f51f",
+      "name": "WhatsApp Image 2025-06-13 at 15.00.50_410dd1ce.jpg",
+      "url": "blob:http://localhost:4200/d244e0d8-e98f-4373-a06b-1e99045d5d86"
+    },
+    {
+      "id": "eecf",
+      "name": "WhatsApp Image 2025-06-13 at 15.00.50_c50f29b6.jpg",
+      "url": "blob:http://localhost:4200/259cdf91-2a8c-4a86-ac7e-1b37bba1405c"
+    },
+    {
+      "id": "3289",
+      "name": "WhatsApp Image 2025-06-20 at 21.37.09_c3af2b07.jpg",
+      "url": "blob:http://localhost:4200/dc27c457-6c21-45c9-87bf-c6c3b629e1f2"
+    },
+    {
+      "id": "c1ae",
+      "name": "myPhoto.png",
+      "url": "blob:http://localhost:4200/2fbf12af-f484-4a54-82db-3fafb6fe560c"
+    },
+    {
+      "id": "cd73",
+      "name": "Screenshot (6).png",
+      "url": "blob:http://localhost:4200/8dc046eb-d385-4d9a-86ef-8e9da62f5176"
+    },
+    {
+      "id": "6d43",
+      "name": "Screenshot (2).png",
+      "url": "blob:http://localhost:4200/9b374c47-e366-49f5-839b-78b982a68f1c"
+    },
+    {
+      "id": "08fb",
+      "name": "Screenshot (1).png",
+      "url": "blob:http://localhost:4200/80e19aff-94f0-4e73-aee1-bf835b78e9ee"
+    },
+    {
+      "id": "fa1f",
+      "name": "Screenshot (2).png",
+      "url": "blob:http://localhost:4200/f17488dd-7b7b-4374-8f69-c1069ebe930d"
+    },
+    {
+      "id": "8e82",
+      "name": "Screenshot (7).png",
+      "url": "blob:http://localhost:4200/b934af88-5596-4cd8-9e81-925f7ed90739"
+    },
+    {
+      "id": "45ca",
+      "name": "a.txt",
+      "url": "blob:http://localhost:4200/32556e85-43a8-49d9-b023-027d6575aec4"
+    }
+  ],
+  "contactUs": [
+    {
+      "id": "1",
+      "name": "a comment about post 1",
+      "email": "1",
+      "Subject": "gfg",
+      "Massage": "Hi"
+    },
+    {
+      "id": "7dfc",
+      "name": "Aslam Salim Beg",
+      "email": "begaslam9109@gmail.com",
+      "subject": "Application for Angular Devloper",
+      "message": "nbegrgr"
+    },
+    {
+      "id": "4585",
+      "name": "Aslam Salim Beg",
+      "email": "begaslam9109@gmail.com",
+      "subject": "Application for Angular Devloper",
+      "message": "nfbehrhfvb"
+    },
+    {
+      "id": "1718",
+      "name": "Aslam Salim Beg",
+      "email": "begaslam9109@gmail.com",
+      "subject": "Application for Angular Devloper",
+      "message": "bvvggdrdrdrdrd"
+    },
+    {
+      "id": "2387",
+      "name": "Aslam Salim Beg",
+      "email": "sameerb23@gmail.com",
+      "subject": "Application for Angular Devloper",
+      "message": "dnfefhew"
+    },
+    {
+      "id": "51ae",
+      "name": "Aslam Salim Beg",
+      "email": "sameerb23@gmail.com",
+      "subject": "Application for Angular Devloper",
+      "message": "vjhfyffyfyuyfy"
+    },
+    {
+      "id": "72fa",
+      "name": "Aslam Salim Beg",
+      "email": "sameerb23@gmail.com",
+      "subject": "Application for Angular Devloper",
+      "message": "mbsbjeagregre"
+    },
+    {
+      "id": "6bd9",
+      "name": "Aslam Salim Beg",
+      "email": "begaslam9109@gmail.com",
+      "subject": "Application for Angular Devloper",
+      "message": "xdfdf"
+    },
+    {
+      "id": "49ca",
+      "name": "Aslam Salim Beg",
+      "email": "begaslam9109@gmail.com",
+      "subject": "Application for Angular Devloper",
+      "message": "dfewjwejt"
+    },
+    {
+      "id": "a22f",
+      "name": "Beg software developer",
+      "email": "ganeshs65@gmail.com",
+      "subject": "mdbfjb",
+      "message": "dmfnsm"
+    },
+    {
+      "id": "ddac",
+      "name": "sagar shinde",
+      "email": "sagarashide45@gmail.com",
+      "subject": "Application for Angular Devloper",
+      "message": "dnfbdjfjee"
+    },
+    {
+      "id": "7276",
+      "name": "Manish Jathar",
+      "email": "manishJ34@gmail.com",
+      "subject": "Application for Angular Devloper",
+      "message": "svdhwfdywfeyfee"
+    },
+    {
+      "id": "beda",
+      "name": "ganesh",
+      "email": "ganeshs65@gmail.com",
+      "subject": "Application for Angular Devloper",
+      "message": "jhjgyyfftft"
     }
   ]
 }

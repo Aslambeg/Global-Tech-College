@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
 export class FooterComponent {
   currentYear = new Date().getFullYear();
   isDarkMode = false;
-  public email:any='info@collegename.com';
+  public email:any='begaslam9109@gmail.com';
+  public email1:any='';
+
 
 constructor() {
 // Apply saved theme on load
