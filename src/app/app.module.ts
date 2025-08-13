@@ -33,6 +33,7 @@ import { NewBScComponent } from './pages/home/new-bsc/new-bsc.component';
 import { EngineeringComponent } from './pages/engineering/engineering.component';
 import { ManagementComponent } from './pages/management/management.component';
 import { PureSciencesComponent } from './pages/pure-sciences/pure-sciences.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { PureSciencesComponent } from './pages/pure-sciences/pure-sciences.compo
     NewBScComponent,
     EngineeringComponent,
     ManagementComponent,
-    PureSciencesComponent
+    PureSciencesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

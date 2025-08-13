@@ -24,6 +24,7 @@ import { NewBScComponent } from './pages/home/new-bsc/new-bsc.component';
 import { EngineeringComponent } from './pages/engineering/engineering.component';
 import { ManagementComponent } from './pages/management/management.component';
 import { PureSciencesComponent } from './pages/pure-sciences/pure-sciences.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 // const routes: Routes = [
 //   { path: 'login', component: LoginComponent },
@@ -162,7 +163,8 @@ const routes: Routes = [
 {path:"NewBSc",component:NewBScComponent},
 {path:"Engineering",component:EngineeringComponent},
 {path:"Management",component:ManagementComponent},
-{path:"Science",component:PureSciencesComponent}
+{path:"Science",component:PureSciencesComponent},
+ { path: '**', component: PageNotFoundComponent } // Wildcard (must be last)
 
 
 
