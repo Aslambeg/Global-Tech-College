@@ -48,7 +48,7 @@ export class RegisterComponent {
   registerForm: FormGroup;
 success = '';
 error = '';
-apiUrl = 'http://localhost:3000/users';
+apiUrl = 'https://college-json-server-1.onrender.com/users';
 
 constructor(
 private fb: FormBuilder,
