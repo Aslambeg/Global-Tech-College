@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ContactService {
-   private apiUrl = 'http://localhost:3000/contactUs'; // Change to your backend URL
+   private apiUrl = 'https://college-json-server-1.onrender.com/contactUs'; // Change to your backend URL
 
   constructor(private http: HttpClient) {}
 

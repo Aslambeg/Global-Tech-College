@@ -144,6 +144,12 @@
       "name": "Atharv Kambale",
       "email": "atharvkambale55@gmail.com",
       "course": "BBA"
+    },
+    {
+      "id": "61ef",
+      "name": "Prash",
+      "email": "prashg22@gmil.com",
+      "course": "BBA"
     }
   ],
   "notes": [
@@ -331,6 +337,13 @@
       "email": "ganeshs65@gmail.com",
       "subject": "Application for Angular Devloper",
       "message": "jhjgyyfftft"
+    },
+    {
+      "id": "8c07",
+      "name": "dev",
+      "email": "devs22@gmail.com",
+      "subject": "demo Mssage",
+      "message": "djrruturgturtg"
     }
   ]
 }

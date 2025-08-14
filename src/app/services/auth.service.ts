@@ -60,8 +60,8 @@ import { map, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000/users';
-  private textUrl: any = 'http://localhost:3000/users';
+  private apiUrl = 'https://college-json-server-1.onrender.com/users';
+  private textUrl: any = 'https://college-json-server-1.onrender.com/users';
 
   constructor(private http: HttpClient, private router: Router) {}
 
