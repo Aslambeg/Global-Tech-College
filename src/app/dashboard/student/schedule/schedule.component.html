@@ -1,0 +1,27 @@
+<div class="container py-4">
+  <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+    <h3 class="fw-bold m-0">Class Schedule</h3>
+    <select class="form-select w-auto" [(ngModel)]="day">
+      <option>Monday</option><option>Tuesday</option>
+      <option>Wednesday</option><option>Thursday</option><option>Friday</option>
+    </select>
+  </div>
+
+  <div class="table-responsive rounded-3 shadow-sm">
+    <table class="table align-middle m-0">
+      <thead class="table-light">
+      <tr>
+        <th>Subject</th><th>Time</th><th>Room</th><th>Faculty</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of schedule | slice:0:100" [class.d-none]="s.day!==day">
+        <td class="fw-semibold">{{ s.subject }}</td>
+        <td>{{ s.time }}</td>
+        <td><span class="badge bg-outline">{{ s.room }}</span></td>
+        <td>{{ s.teacher }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,12 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
-  selector: 'app-faculty',
-  templateUrl: './faculty.component.html',
-  styleUrls: ['./faculty.component.scss']
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.scss']
 })
-export class FacultyComponent {
+export class ProfileComponent {
    userName: string = '';
   userRole: string = '';
 

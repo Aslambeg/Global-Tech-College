@@ -1,4 +1,4 @@
-<div class="dashboard-container">
+<!-- <div class="dashboard-container">
   <div class="welcome-card">
     <h2>Welcome, {{ userName }}</h2>
     <p class="role-tag">Role: {{ userRole | titlecase }}</p>
@@ -8,73 +8,89 @@
     <div class="dashboard-card">
       <h4>Notices</h4>
       <p>Stay updated with the latest college circulars.</p>
-      <button class="action-btn">View Notices</button>
+      <button class="action-btn" routerLink="notices" >View Notices</button>
     </div>
 
     <div class="dashboard-card">
       <h4>Schedule</h4>
       <p>Check your daily timetable and class schedule.</p>
-      <button class="action-btn">View Schedule</button>
+      <button class="action-btn" routerLink="schedule">View Schedule</button>
     </div>
 
     <div class="dashboard-card">
       <h4>Assignments</h4>
       <p>View and submit your assignments on time.</p>
-      <button class="action-btn">Go to Assignments</button>
+      <button class="action-btn" routerLink="assignment">Go to Assignments</button>
     </div>
 
     <div class="dashboard-card">
       <h4>Profile</h4>
       <p>Update your personal details and preferences.</p>
-      <button class="action-btn">Edit Profile</button>
+      <button class="action-btn" routerLink="profile">Edit Profile</button>
     </div>
 
     <div class="dashboard-card">
       <h4 class="card-title">Upload / View Notes</h4>
       <p>Admins can upload and students can view/download notes.</p>
-      <button routerLink="/notes" class="action-btn">Go to Notes</button>
-    </div>
-  </div>
-</div>
-
-
-<!-- <div class="col-md-4">
-  <div class="card h-100 shadow-sm">
-    <div class="card-body text-center">
-      <h5 class="card-title">Upload / View Notes</h5>
-      <p class="card-text">Admins can upload and students can view/download notes.</p>
-      <a routerLink="/notes" class="action-btn">Go to Notes</a>
+      <button routerLink="notes" class="action-btn">Go to Notes</button>
     </div>
   </div>
 </div> -->
-<div class="col-md-4">
-  <div class="card h-100 shadow border-0 custom-card animate__animated animate__fadeInUp">
-    <div class="card-body text-center">
-      <h5 class="card-title fw-bold text-primary">Upload / View Notes</h5>
-      <p class="card-text text-muted"> Admins can upload and students can view/download notes. </p> <a
-        routerLink="/notes" class="btn btn-primary btn-sm rounded-pill px-4">Go to Notes</a>
+
+<div class="dashboard-container">
+  <div class="welcome-card">
+    <h2>Welcome, {{ userName }}</h2>
+    <p class="role-tag">Role: {{ userRole | titlecase }}</p>
+  </div>
+
+  <!-- Main Dashboard (Cards) -->
+  <div class="dashboard-grid" *ngIf="activeSection === 'dashboard'">
+    <div class="dashboard-card">
+      <h4>Notices</h4>
+      <p>Stay updated with the latest college circulars.</p>
+      <button class="action-btn" (click)="showSection('notices')">View Notices</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h4>Schedule</h4>
+      <p>Check your daily timetable and class schedule.</p>
+      <button class="action-btn" (click)="showSection('schedule')">View Schedule</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h4>Assignments</h4>
+      <p>View and submit your assignments on time.</p>
+      <button class="action-btn" (click)="showSection('assignments')">Go to Assignments</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h4>Profile</h4>
+      <p>Update your personal details and preferences.</p>
+      <button class="action-btn" (click)="showSection('profile')">View Profile</button>
     </div>
   </div>
+
+  <!-- Notices -->
+  <div *ngIf="activeSection === 'notices'">
+    <app-notices></app-notices>
+    <button class="back-btn" (click)="showSection('dashboard')">⬅ Back</button>
+  </div>
+
+  <!-- Schedule -->
+  <div *ngIf="activeSection === 'schedule'">
+    <app-schedule></app-schedule>
+    <button class="back-btn" (click)="showSection('dashboard')">⬅ Back</button>
+  </div>
+
+  <!-- Assignments -->
+  <div *ngIf="activeSection === 'assignments'">
+    <app-assignments></app-assignments>
+    <button class="back-btn" (click)="showSection('dashboard')">⬅ Back</button>
+  </div>
+
+  <!-- Profile -->
+  <div *ngIf="activeSection === 'profile'">
+    <app-profile></app-profile>
+    <button class="back-btn" (click)="showSection('dashboard')">⬅ Back</button>
+  </div>
 </div>
-<style>
-  .custom-card {
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-border-radius: 15px;
-background: #ffffff;
-}
-
-.custom-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-background: linear-gradient(to right, #fceabb, #f8b500);
-color: #fff;
-}
-
-.card-title {
-font-size: 1.2rem;
-}
-
-.card-text {
-font-size: 0.95rem;
-}
-</style>

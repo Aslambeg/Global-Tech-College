@@ -34,6 +34,10 @@ import { EngineeringComponent } from './pages/engineering/engineering.component'
 import { ManagementComponent } from './pages/management/management.component';
 import { PureSciencesComponent } from './pages/pure-sciences/pure-sciences.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NoticesComponent } from './dashboard/student/notices/notices.component';
+import { ScheduleComponent } from './dashboard/student/schedule/schedule.component';
+import { AssignmentsComponent } from './dashboard/student/assignments/assignments.component';
+import { ProfileComponent } from './dashboard/student/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +68,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     EngineeringComponent,
     ManagementComponent,
     PureSciencesComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NoticesComponent,
+    ScheduleComponent,
+    AssignmentsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

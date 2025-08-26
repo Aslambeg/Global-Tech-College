@@ -7,8 +7,18 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./student.component.scss']
 })
 export class StudentComponent {
-   userName: string = '';
+  //  userName: string = '';
+  // userRole: string = '';
+
+  // constructor(private authService: AuthService) {}
+
+  // ngOnInit(): void {
+  //   this.userName = this.authService.getUserName();
+  //   this.userRole = this.authService.getRole();
+  // }
+  userName: string = '';
   userRole: string = '';
+  activeSection: string = 'dashboard'; // default view
 
   constructor(private authService: AuthService) {}
 
@@ -16,5 +26,10 @@ export class StudentComponent {
     this.userName = this.authService.getUserName();
     this.userRole = this.authService.getRole();
   }
+
+  showSection(section: string) {
+    this.activeSection = section;
+  }
+
 
 }

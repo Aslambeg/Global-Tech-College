@@ -1,1 +1,36 @@
-<p>faculty works!</p>
+<div class="dashboard-container">
+  <div class="welcome-card">
+    <h2>Welcome, {{ userName }}</h2>
+    <p class="role-tag">Role: {{ userRole | titlecase }}</p>
+  </div>
+
+  <div class="dashboard-grid">
+    <!-- Manage Assignments -->
+    <div class="dashboard-card">
+      <h4>Assignments</h4>
+      <p>Create, review and manage student assignments.</p>
+      <button class="action-btn">Manage Assignments</button>
+    </div>
+
+    <!-- Upload Notes -->
+    <div class="dashboard-card">
+      <h4>Upload Notes</h4>
+      <p>Upload study material and lecture notes for students.</p>
+      <button class="action-btn">Upload Notes</button>
+    </div>
+
+    <!-- Schedule Classes -->
+    <div class="dashboard-card">
+      <h4>Schedule</h4>
+      <p>Plan and update your teaching schedule.</p>
+      <button class="action-btn">View Schedule</button>
+    </div>
+
+    <!-- Student Interaction -->
+    <div class="dashboard-card">
+      <h4>Student Queries</h4>
+      <p>Answer student doubts and provide guidance.</p>
+      <button class="action-btn">View Queries</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<section class="notices-section container">
+  <h2 class="section-title">📢 Latest Notices</h2>
+
+  <div class="notices-grid">
+    <div class="notice-card" *ngFor="let notice of notices">
+      <h3>{{ notice.title }}</h3>
+      <p>{{ notice.description }}</p>
+      <button class="btn-view">Read More</button>
+    </div>
+  </div>
+</section>

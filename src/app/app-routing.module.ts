@@ -25,6 +25,10 @@ import { EngineeringComponent } from './pages/engineering/engineering.component'
 import { ManagementComponent } from './pages/management/management.component';
 import { PureSciencesComponent } from './pages/pure-sciences/pure-sciences.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NoticesComponent } from './dashboard/student/notices/notices.component';
+import { ProfileComponent } from './dashboard/student/profile/profile.component';
+import { AssignmentsComponent } from './dashboard/student/assignments/assignments.component';
+import { ScheduleComponent } from './dashboard/student/schedule/schedule.component';
 
 // const routes: Routes = [
 //   { path: 'login', component: LoginComponent },
@@ -138,37 +142,57 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 //   { path: '', redirectTo: '/login', pathMatch: 'full' }
 // ];
 const routes: Routes = [
-{ path: '', redirectTo: '/login', pathMatch: 'full' },
-{ path: 'login', component: LoginComponent },
-{ path: 'register', component: RegisterComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 
-// Standalone admin dashboard and tools (no children!)
-{ path: 'dashboard/admin', component: AdminComponent, canActivate: [authGuardGuard], data: { role: 'admin' } },
-{ path: 'dashboard/admin/students', component: AdminStudentsComponent, canActivate: [authGuardGuard], data: { role: 'admin' } },
-{ path: 'dashboard/admin/fileupload', component: FileUploadComponent, canActivate: [authGuardGuard], data: { role: 'admin' } },
-{ path: 'dashboard/admin/charts', component: DashboardChartsComponent, canActivate: [authGuardGuard], data: { role: 'admin' } },
+  // Standalone admin dashboard and tools (no children!)
+  { path: 'dashboard/admin', component: AdminComponent, canActivate: [authGuardGuard], data: { role: 'admin' } },
+  { path: 'dashboard/admin/students', component: AdminStudentsComponent, canActivate: [authGuardGuard], data: { role: 'admin' } },
+  { path: 'dashboard/admin/fileupload', component: FileUploadComponent, canActivate: [authGuardGuard], data: { role: 'admin' } },
+  { path: 'dashboard/admin/charts', component: DashboardChartsComponent, canActivate: [authGuardGuard], data: { role: 'admin' } },
 
-// Other dashboards
-{ path: 'dashboard/student', component: StudentComponent, canActivate: [authGuardGuard], data: { role: 'student' } },
-{ path: 'dashboard/faculty', component: FacultyComponent, canActivate: [authGuardGuard], data: { role: 'faculty' } },
+  // Other dashboards
+   
+//     path: 'dashboard/admin',
+//     component: AdminComponent,
+//     canActivate: [authGuardGuard],
+//     data: { role: 'admin' },
+//     children: [
+//       { path: 'students', component: AdminStudentsComponent },
+//       { path: 'students1', component: NewAdminStudentComponent },
+//       { path: 'fileupload', component: FileUploadComponent },
+//       { path: 'fileupload1', component: FileUploadNewComponent }, 
+//       { path: 'charts', component: DashboardChartsComponent }
+//     ]
+//   },
+   
+  { path: 'dashboard/student', component: StudentComponent, canActivate: [authGuardGuard], data: { role: 'student' } , children:[
+    {path:"profile",component:ProfileComponent},
+    {path:"assignment",component:AssignmentsComponent},
+    {path:"notices",component:NoticesComponent},
+    {path:"schedule",component:ScheduleComponent},
 
-// Other pages
-{ path: 'notes', component: NotesComponent, canActivate: [authGuardGuard] },
-{ path: 'about', component: AboutComponent },
-{ path: 'home', component: HomeComponent },
-{ path: 'events', component: EventsComponent },
-{ path: 'contact', component: ContactComponent },
-{ path: 'admission', component: AdmissionComponent },
-{ path: 'bsc', component: BScComponent },
-{path:"NewBSc",component:NewBScComponent},
-{path:"Engineering",component:EngineeringComponent},
-{path:"Management",component:ManagementComponent},
-{path:"Science",component:PureSciencesComponent},
- { path: '**', component: PageNotFoundComponent } // Wildcard (must be last)
+    // {path:"",component:ProfileComponent},
 
+  ] },
+  { path: 'dashboard/faculty', component: FacultyComponent, canActivate: [authGuardGuard], data: { role: 'faculty' } },
 
-
-
+  // Other pages
+  { path: 'notes', component: NotesComponent, canActivate: [authGuardGuard] },
+  { path: 'about', component: AboutComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'events', component: EventsComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'admission', component: AdmissionComponent },
+  { path: 'bsc', component: BScComponent },
+  { path: "NewBSc", component: NewBScComponent },
+  { path: "Engineering", component: EngineeringComponent },
+  { path: "Management", component: ManagementComponent },
+  { path: "Science", component: PureSciencesComponent },
+  // { path: "notices", component: NoticesComponent },
+  // { path: "profile", component: ProfileComponent },
+  { path: '**', component: PageNotFoundComponent } // Wildcard (must be last) 
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
@@ -177,7 +201,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 
-2. // const routes: Routes = [
+ // const routes: Routes = [
 //   // Public Pages
 //   { path: 'home', component: HomeComponent },
 //   { path: 'about', component: AboutComponent },
