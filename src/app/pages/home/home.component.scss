@@ -697,3 +697,48 @@ $card-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
 .btn.small:hover {
   background: #0056b3;
 }
+
+.hero-buttons .hero-btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-buttons .btn-primary {
+  background: linear-gradient(135deg, #ff7b00, #ff9900);
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+.hero-buttons .btn-primary:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff9900, #ff7b00);
+}
+
+.hero-buttons .btn-outline-light {
+  color: #fff;
+  border: 2px solid #fff;
+  background: transparent;
+}
+
+.hero-buttons .btn-outline-light:hover {
+  background: #fff;
+  color: #ff7b00;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+  .hero-buttons .hero-btn {
+    margin: 10px 0;
+    width: 80%;
+    justify-content: center;
+  }
+}

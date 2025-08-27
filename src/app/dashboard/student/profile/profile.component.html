@@ -1,6 +1,58 @@
-<div class="dashboard-container">
-    <div class="welcome-card">
-        <h2>Welcome, {{ userName }}</h2>
-        <p class="role-tag">Role: {{ userRole | titlecase }}</p>
+<div class="container mt-4">
+  <div class="card shadow-lg p-4">
+    <h3 class="mb-3">My Profile</h3>
+
+    <div *ngIf="!isEditing">
+      <p><strong>Name:</strong> {{ profile.name }}</p>
+      <p><strong>Email:</strong> {{ profile.email }}</p>
+      <p><strong>Role:</strong> {{ profile.role }}</p>
+
+      <button class="btn btn-primary" (click)="editProfile()">Edit Profile</button>
     </div>
+
+    <div *ngIf="isEditing">
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            id="name"
+            [(ngModel)]="profile.name"
+            name="name"
+            class="form-control"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            [(ngModel)]="profile.email"
+            name="email"
+            class="form-control"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="role" class="form-label">Role</label>
+          <input
+            type="text"
+            id="role"
+            [(ngModel)]="profile.role"
+            name="role"
+            class="form-control"
+            [readonly]="true"
+          />
+        </div>
+
+        <button type="button" class="btn btn-success me-2" (click)="saveProfile()">
+          Save
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="cancelEdit()">
+          Cancel
+        </button>
+      </form>
+    </div>
+  </div>
 </div>

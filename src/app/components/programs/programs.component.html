@@ -1,0 +1,17 @@
+<div class="container my-5">
+    <h2 class="text-center mb-4">Our Programs</h2>
+    <div class="row">
+        <!-- Computer Science -->
+        <div class="col-md-3 mb-4" *ngFor="let program of programs">
+            <div class="card h-100 shadow-lg">
+                <img [src]="'assets/' + program.image" class="card-img-top" [alt]="program.name">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ program.name }}</h5>
+                    <p class="card-text">{{ program.desc }}</p>
+                    <button class="btn btn-primary me-2" (click)="explore(program)">Explore</button>
+                    <button class="btn btn-success" (click)="download(program)">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

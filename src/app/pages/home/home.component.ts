@@ -224,6 +224,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ContactService } from 'src/app/services/contact.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -296,7 +297,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     private fb: FormBuilder,
     private contactService: ContactService,
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) {
     this.reactiveContactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
@@ -435,6 +437,16 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     if (track) {
       track.style.transform = `translateX(-${this.testimonialIndex * 100}%)`;
     }
+  }
+  downloadBrochure() {
+  // If brochure is in assets folder
+  const link = document.createElement('a');
+  link.href = 'assets/brochure.pdf';   // place your file in src/assets
+  link.download = 'College-Brochure.pdf';
+  link.click();
+}
+goToPrograms() {
+    this.router.navigate(['/programs']);  // make sure you have a route for programs
   }
 
   ngOnDestroy(): void {

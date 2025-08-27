@@ -1,0 +1,21 @@
+.program-details {
+  h2 {
+    color: #2c3e50;
+  }
+
+  img {
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .list-group-item {
+    border: none;
+    padding: 0.6rem 1rem;
+    background-color: #f8f9fa;
+  }
+
+  ul li {
+    margin-bottom: 0.3rem;
+  }
+}

@@ -119,4 +119,9 @@ export class AuthService {
   getToken(): string {
     return this.getUser()?.token || ''; // assuming your user object has token field
   }
+  
+  // ✅ New method
+  getUserId(): number {
+    return this.getUser()?.id || 0;
+  }
 }

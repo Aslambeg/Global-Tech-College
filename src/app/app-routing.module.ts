@@ -29,6 +29,8 @@ import { NoticesComponent } from './dashboard/student/notices/notices.component'
 import { ProfileComponent } from './dashboard/student/profile/profile.component';
 import { AssignmentsComponent } from './dashboard/student/assignments/assignments.component';
 import { ScheduleComponent } from './dashboard/student/schedule/schedule.component';
+import { ProgramsComponent } from './components/programs/programs.component';
+import { ProgramDetailsComponent } from './components/program-details/program-details.component';
 
 // const routes: Routes = [
 //   { path: 'login', component: LoginComponent },
@@ -190,6 +192,8 @@ const routes: Routes = [
   { path: "Engineering", component: EngineeringComponent },
   { path: "Management", component: ManagementComponent },
   { path: "Science", component: PureSciencesComponent },
+  { path: 'programs', component: ProgramsComponent },
+   { path: 'program-details/:id', component: ProgramDetailsComponent },
   // { path: "notices", component: NoticesComponent },
   // { path: "profile", component: ProfileComponent },
   { path: '**', component: PageNotFoundComponent } // Wildcard (must be last) 

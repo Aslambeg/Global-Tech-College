@@ -38,6 +38,8 @@ import { NoticesComponent } from './dashboard/student/notices/notices.component'
 import { ScheduleComponent } from './dashboard/student/schedule/schedule.component';
 import { AssignmentsComponent } from './dashboard/student/assignments/assignments.component';
 import { ProfileComponent } from './dashboard/student/profile/profile.component';
+import { ProgramsComponent } from './components/programs/programs.component';
+import { ProgramDetailsComponent } from './components/program-details/program-details.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +74,9 @@ import { ProfileComponent } from './dashboard/student/profile/profile.component'
     NoticesComponent,
     ScheduleComponent,
     AssignmentsComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProgramsComponent,
+    ProgramDetailsComponent
   ],
   imports: [
     BrowserModule,

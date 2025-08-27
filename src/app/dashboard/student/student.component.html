@@ -63,6 +63,11 @@
       <button class="action-btn" (click)="showSection('assignments')">Go to Assignments</button>
     </div>
 
+     <div class="dashboard-card">
+      <h4>Notes</h4>  
+      <p>Download study materials</p>
+      <button class="action-btn" (click)="showSection('notes')">Go to Assignments</button>
+    </div>
     <div class="dashboard-card">
       <h4>Profile</h4>
       <p>Update your personal details and preferences.</p>
@@ -85,6 +90,11 @@
   <!-- Assignments -->
   <div *ngIf="activeSection === 'assignments'">
     <app-assignments></app-assignments>
+    <button class="back-btn" (click)="showSection('dashboard')">⬅ Back</button>
+  </div>
+   <!-- Notes -->
+  <div *ngIf="activeSection === 'notes'">
+<app-file-upload></app-file-upload>
     <button class="back-btn" (click)="showSection('dashboard')">⬅ Back</button>
   </div>
 

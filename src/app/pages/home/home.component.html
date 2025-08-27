@@ -70,8 +70,18 @@
           <li>Comprehensive student support and placement cell</li>
         </ul>
         <div class="about-ctas">
-          <button class="btn primary">Explore Programs</button>
-          <button class="btn outline">Download Brochure</button>
+          <!-- <button class="btn primary">Explore Programs</button>
+          <button class="btn outline">Download Brochure</button> -->
+          <div class="hero-buttons d-flex flex-wrap justify-content-center mt-4">
+            <button class="btn btn-primary me-3 hero-btn" (click)="goToPrograms()">
+              <i class="bi bi-search"></i> Explore Programs
+            </button> 
+            <button class="btn btn-outline-light hero-btn" (click)="downloadBrochure()">
+              <i class="bi bi-download"></i> Download Brochure
+            </button>
+
+          </div>
+
         </div>
       </div>
     </div>
