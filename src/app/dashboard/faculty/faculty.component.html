@@ -1,33 +1,39 @@
 <div class="dashboard-container">
-  <div class="welcome-card">
+  <!-- Welcome Card -->
+  <div class="welcome-card" data-aos="fade-down">
     <h2>Welcome, {{ userName }}</h2>
     <p class="role-tag">Role: {{ userRole | titlecase }}</p>
   </div>
 
+  <!-- Dashboard Grid -->
   <div class="dashboard-grid">
-    <!-- Manage Assignments -->
-    <div class="dashboard-card">
+    <!-- Assignments Card -->
+    <div class="dashboard-card" data-aos="zoom-in" data-aos-delay="100" (click)="navigateTo('assignments')">
+      <div class="card-icon">📚</div>
       <h4>Assignments</h4>
       <p>Create, review and manage student assignments.</p>
       <button class="action-btn">Manage Assignments</button>
     </div>
 
-    <!-- Upload Notes -->
-    <div class="dashboard-card">
+    <!-- Upload Notes Card -->
+    <div class="dashboard-card" data-aos="zoom-in" data-aos-delay="200" (click)="navigateTo('notes')">
+      <div class="card-icon">📝</div>
       <h4>Upload Notes</h4>
       <p>Upload study material and lecture notes for students.</p>
       <button class="action-btn">Upload Notes</button>
     </div>
 
-    <!-- Schedule Classes -->
-    <div class="dashboard-card">
+    <!-- Schedule Card -->
+    <div class="dashboard-card" data-aos="zoom-in" data-aos-delay="300" (click)="navigateTo('schedule')">
+      <div class="card-icon">📅</div>
       <h4>Schedule</h4>
       <p>Plan and update your teaching schedule.</p>
       <button class="action-btn">View Schedule</button>
     </div>
 
-    <!-- Student Interaction -->
-    <div class="dashboard-card">
+    <!-- Student Queries Card -->
+    <div class="dashboard-card" data-aos="zoom-in" data-aos-delay="400" (click)="navigateTo('queries')">
+      <div class="card-icon">💬</div>
       <h4>Student Queries</h4>
       <p>Answer student doubts and provide guidance.</p>
       <button class="action-btn">View Queries</button>
