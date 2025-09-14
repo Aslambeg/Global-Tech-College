@@ -1,81 +1,122 @@
+<div class="about-page">
 
-<section class="about-section py-5">
-  <div class="container">
-    <!-- Heading -->
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">About Global Tech College</h2>
-      <p class="lead">
-        Global Tech College is a hub of innovation and excellence, delivering top-tier
-        education with a strong focus on research, technology, and global impact.
-      </p>
+  <!-- Hero Section -->
+  <section class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+    <img src="assets\Gemini_Generated_Image_oeoamtoeoamtoeoa.png" class="hero-img" alt="College Hero">
+    <div class="hero-overlay">
+      <h1 class="fw-bold">About Our College</h1>
+      <p class="lead">Empowering students with knowledge, innovation, and values since 2000</p>
     </div>
+  </section>
 
-    <!-- Mission -->
-    <div class="row mb-5 align-items-center">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="assets/OurMIssion1.jpg" alt="Our Mission"
-          class="img-fluid rounded shadow-sm" />
+  <!-- About Us -->
+  <section class="about-info container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4">
+        <img src="assets/cam1.webp" class="img-fluid rounded shadow-lg" alt="Campus">
       </div>
       <div class="col-md-6">
-        <h4>Our Mission</h4>
+        <h2 class="fw-bold text-primary">Who We Are</h2>
         <p>
-          To empower future leaders by nurturing creativity, critical thinking, and a passion for
-          learning in a supportive, technologically advanced environment.
+          Global Tech College is a hub of learning, innovation, and excellence.  
+          With world-class faculty, modern infrastructure, and strong placement support,  
+          we prepare students to be leaders of tomorrow.
+        </p>
+        <p>
+          Our vision is to nurture talent, foster creativity, and empower students
+          with real-world skills through an industry-focused curriculum.
         </p>
       </div>
     </div>
+  </section>
 
-    <!-- Vision -->
-    <div class="row mb-5 align-items-center flex-md-row-reverse">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="assets/Our Vision.webp" alt="Our Vision"
-          class="img-fluid rounded shadow-sm" />
-      </div>
-      <div class="col-md-6">
-        <h4>Our Vision</h4>
-        <p>
-          To become a globally recognized institution known for academic excellence,
-          impactful research, and shaping responsible global citizens.
-        </p>
+  <!-- Mission & Vision -->
+  <section class="mission-vision py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Our Mission & Vision</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100 mission-card">
+            <div class="card-body">
+              <h5 class="fw-bold text-primary">🎯 Mission</h5>
+              <p>
+                To provide high-quality education, foster innovation, and create
+                a learning environment that inspires growth and excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100 mission-card">
+            <div class="card-body">
+              <h5 class="fw-bold text-success">🌟 Vision</h5>
+              <p>
+                To be a globally recognized institution that nurtures future leaders
+                and contributes positively to society through education and research.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Stats -->
-    <div class="row text-center mb-5">
-      <div class="col-md-4 mb-4 mb-md-0">
-        <img src="https://cdn-icons-png.flaticon.com/512/1161/1161650.png" alt="Faculty" class="mb-3" width="70" />
-        <h5>150+ Faculty Members</h5>
-        <p>Highly qualified educators and industry mentors guiding students every step of the way.</p>
-      </div>
-      <div class="col-md-4 mb-4 mb-md-0">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="Students" class="mb-3" width="70" />
-        <h5>4000+ Students</h5>
-        <p>A vibrant, inclusive student community from across the globe.</p>
-      </div>
-      <div class="col-md-4">
-        <img src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" alt="Placements" class="mb-3" width="70" />
-        <h5>Top Placements</h5>
-        <p>Excellent industry connections and career support for student success.</p>
+  <!-- Core Values -->
+  <section class="core-values container py-5">
+    <h2 class="text-center fw-bold mb-4">Our Core Values</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-3" *ngFor="let value of ['Integrity','Excellence','Innovation','Community']">
+        <div class="card shadow-sm h-100 border-0 p-3 value-card">
+          <h5 class="fw-bold">{{ value }}</h5>
+          <p class="text-muted">
+            We believe in {{ value.toLowerCase() }} as a guiding principle for our institution.
+          </p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Why Choose Us -->
-    <!-- Why Choose Us -->
-<div class="row">
-  <div class="col">
-    <div class="why-card">
-      <h4 class="text-primary">Why Choose Us?</h4>
-      <ul class="list-unstyled mt-3">
-        <li>✅ State-of-the-art infrastructure and innovation hubs</li>
-        <li>✅ International collaborations and exchange programs</li>
-        <li>✅ Scholarships and financial aid opportunities</li>
-        <li>✅ AI/ML, Data Science, and Robotics specialization tracks</li>
+  <!-- College Highlights -->
+  <section class="highlights py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Our Journey</h2>
+      <ul class="timeline">
+        <li>
+          <h5>2000</h5>
+          <p>College established with 200 students and 10 faculty members.</p>
+        </li>
+        <li>
+          <h5>2010</h5>
+          <p>Expanded with new campus and state-of-the-art laboratories.</p>
+        </li>
+        <li>
+          <h5>2020</h5>
+          <p>Achieved 95% placement rate with leading global companies.</p>
+        </li>
+        <li>
+          <h5>2025</h5>
+          <p>Introduced AI-driven learning platforms and global collaborations.</p>
+        </li>
       </ul>
     </div>
-  </div>
-</div>
+  </section>
 
-  </div>
-</section>
+  <!-- Faculty / Team -->
+  <section class="team-section container py-5">
+    <h2 class="text-center fw-bold mb-4">Our Faculty</h2>
+    <div class="row g-4">
+      <div class="col-md-4" *ngFor="let teacher of ['Dr. Sharma - Dean','Prof. Khan - HOD CS','Ms. Patel - Placement Head']">
+        <div class="card team-card shadow border-0 text-center h-100">
+          <img src="assets/faculty.jpg" class="card-img-top rounded-circle p-3" alt="Faculty">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">{{ teacher }}</h5>
+            <p class="text-muted">Expert in Technology & Innovation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
 
 
