@@ -18,15 +18,27 @@ import { ThemeService } from 'ng2-charts';
     ])
   ]
 })
-export class AppComponent { 
-   darkMode = false;
+export class AppComponent {
   title = 'mycollege-web-app';
   role = '';
   isLoggedIn = false;
   username = '';
   searchTerm = '';
   isDarkMode = false;
-  // private email:any='begaslam9109@gmail.com';
+
+  // 🔹 Dataset for dynamic search
+  data = [
+    { name: 'Library', anchor: 'library' },
+    { name: 'Labs', anchor: 'labs' },
+    { name: 'Clubs', anchor: 'clubs' },
+    { name: 'Placement', anchor: 'placement' },
+    { name: 'Admission', route: '/admission' },
+    { name: 'Events', route: '/events' },
+    { name: 'Contact', route: '/contact' },
+    { name: 'About Us', route: '/about' }
+  ];
+
+  filteredResults: any[] = [];
 
   constructor(
     private auth: AuthService,
@@ -70,18 +82,27 @@ export class AppComponent {
     document.body.classList.toggle('dark-mode', this.isDarkMode);
   }
 
+  // 🔹 Dynamic search with live suggestions
   onSearch() {
     const query = this.searchTerm.toLowerCase().trim();
-    if (query.includes('library')) {
-      this.scroller.scrollToAnchor('library');
-    } else if (query.includes('labs')) {
-      this.scroller.scrollToAnchor('labs');
-    } else if (query.includes('clubs')) {
-      this.scroller.scrollToAnchor('clubs');
-    } else if (query.includes('placement')) {
-      this.scroller.scrollToAnchor('placement');
-    } else {
-      alert('Sorry, section not found!');
+    if (!query) {
+      this.filteredResults = [];
+      return;
     }
+
+    this.filteredResults = this.data.filter(item =>
+      item.name.toLowerCase().includes(query)
+    );
+  }
+
+  // 🔹 Navigate to section or page when clicked
+  goTo(item: any) {
+    if (item.anchor) {
+      this.scroller.scrollToAnchor(item.anchor);
+    } else if (item.route) {
+      this.router.navigate([item.route]);
+    }
+    this.filteredResults = []; // hide results after selection
+    this.searchTerm = '';
   }
 }

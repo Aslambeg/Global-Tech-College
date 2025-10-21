@@ -42,12 +42,57 @@
         </li>
 
       </ul>
-      <form class="d-flex" (submit)="onSearch()">
+      <!-- <form class="d-flex" (submit)="onSearch()">
         <input class="form-control stylish-input me-2" type="search" placeholder="Search" [(ngModel)]="searchTerm"
           name="search">
         <button class="btn stylish-btn" type="submit">Go</button>
-      </form>
+      </form> -->
       <!-- <li> -->
+        <form class="d-flex" (submit)="$event.preventDefault()">
+  <input 
+    class="form-control stylish-input me-2" 
+    type="search" 
+    placeholder="Search..." 
+    [(ngModel)]="searchTerm"
+    name="search"
+    (input)="onSearch()" />
+
+  <button class="btn stylish-btn" type="button" (click)="onSearch()">Go</button>
+</form>
+
+<!-- 🔹 Dynamic Results Dropdown -->
+<div *ngIf="filteredResults.length > 0" class="search-dropdown">
+  <ul class="list-group">
+    <li *ngFor="let item of filteredResults" 
+        class="list-group-item"
+        (click)="goTo(item)">
+      {{ item.name }}
+    </li>
+  </ul>
+</div>
+<style>
+  .search-dropdown {
+  position: absolute;
+  top: 60px; /* adjust according to navbar */
+  right: 50px;
+  width: 250px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.search-dropdown .list-group-item {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-dropdown .list-group-item:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+</style>
       <button (click)="toggleTheme()" class="btn btn-outline-light ms-2">
         {{ isDarkMode ? '🌙 Dark' : '☀️ Light' }}
       </button>
